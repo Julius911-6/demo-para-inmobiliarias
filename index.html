@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Ideal | Tu hogar te espera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center text-blue-600 font-bold text-2xl">
+                        <i class="fas fa-home mr-2"></i> InmoIdeal
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">Inicio</a>
+                    <a href="#propiedades" class="text-gray-600 hover:text-blue-600 transition">Propiedades</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-blue-600 transition">Servicios</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition">Contacto</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Publicar</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600">Inicio</a>
+            <a href="#propiedades" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600">Propiedades</a>
+            <a href="#servicios" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600">Servicios</a>
+            <a href="#contacto" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-16 h-screen min-h-[600px] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center px-4 w-full max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Encuentra la casa de tus sueños</h1>
+            <p class="text-xl text-gray-200 mb-8">Descubre las mejores propiedades en venta y alquiler con InmoIdeal.</p>
+            
+            <!-- Search Bar -->
+            <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row gap-4">
+                <input type="text" placeholder="Ubicación o palabra clave" class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                <select class="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 text-gray-600">
+                    <option value="">Tipo de Propiedad</option>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="terreno">Terreno</option>
+                </select>
+                <select class="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 text-gray-600">
+                    <option value="">Operación</option>
+                    <option value="venta">Venta</option>
+                    <option value="alquiler">Alquiler</option>
+                </select>
+                <button class="w-full md:w-auto bg-blue-600 text-white px-8 py-2 rounded font-semibold hover:bg-blue-700 transition">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Properties Section -->
+    <section id="propiedades" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Propiedades Destacadas</h2>
+                <p class="mt-4 text-gray-600">Explora nuestra selección de las mejores propiedades disponibles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Casa Moderna" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">En Venta</div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl drop-shadow-md">$450,000</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Casa Moderna en las Afueras</h3>
+                        <p class="text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>San Isidro, Buenos Aires</p>
+                        <div class="flex justify-between border-t border-gray-100 pt-4 text-gray-600">
+                            <div class="flex items-center"><i class="fas fa-bed mr-2"></i> 4 Hab</div>
+                            <div class="flex items-center"><i class="fas fa-bath mr-2"></i> 3 Baños</div>
+                            <div class="flex items-center"><i class="fas fa-ruler-combined mr-2"></i> 250 m²</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1153&q=80" alt="Departamento Céntrico" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">En Alquiler</div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl drop-shadow-md">$1,200 / mes</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Departamento de Lujo Céntrico</h3>
+                        <p class="text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Palermo, CABA</p>
+                        <div class="flex justify-between border-t border-gray-100 pt-4 text-gray-600">
+                            <div class="flex items-center"><i class="fas fa-bed mr-2"></i> 2 Hab</div>
+                            <div class="flex items-center"><i class="fas fa-bath mr-2"></i> 2 Baños</div>
+                            <div class="flex items-center"><i class="fas fa-ruler-combined mr-2"></i> 95 m²</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Chalet Familiar" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">En Venta</div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl drop-shadow-md">$320,000</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hermoso Chalet Familiar</h3>
+                        <p class="text-gray-500 mb-4"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Pilar, Buenos Aires</p>
+                        <div class="flex justify-between border-t border-gray-100 pt-4 text-gray-600">
+                            <div class="flex items-center"><i class="fas fa-bed mr-2"></i> 3 Hab</div>
+                            <div class="flex items-center"><i class="fas fa-bath mr-2"></i> 2 Baños</div>
+                            <div class="flex items-center"><i class="fas fa-ruler-combined mr-2"></i> 180 m²</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-white border border-blue-600 text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-blue-600 hover:text-white transition">Ver Todas las Propiedades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Nuestros Servicios</h2>
+                <p class="mt-4 text-gray-600">Todo lo que necesitas para tu próxima operación inmobiliaria.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-2xl mb-6">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Compra de Propiedades</h3>
+                    <p class="text-gray-600">Te asesoramos y acompañamos en todo el proceso para que encuentres tu hogar ideal al mejor precio.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-2xl mb-6">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Venta de Propiedades</h3>
+                    <p class="text-gray-600">Publicamos tu propiedad en los mejores portales y nos encargamos de todo para una venta rápida y segura.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-2xl mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Asesoría Legal</h3>
+                    <p class="text-gray-600">Contamos con un equipo de profesionales para garantizar que todas tus operaciones sean 100% legales y seguras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <a href="#" class="flex items-center font-bold text-2xl mb-4">
+                    <i class="fas fa-home mr-2 text-blue-500"></i> InmoIdeal
+                </a>
+                <p class="text-gray-400">Tu agencia inmobiliaria de confianza. Hacemos realidad el sueño de tu casa propia.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">Inicio</a></li>
+                    <li><a href="#propiedades" class="hover:text-white transition">Propiedades</a></li>
+                    <li><a href="#servicios" class="hover:text-white transition">Servicios</a></li>
+                    <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><i class="fas fa-map-marker-alt mr-2"></i> Av. Corrientes 1234, CABA</li>
+                    <li><i class="fas fa-phone mr-2"></i> +54 11 1234-5678</li>
+                    <li><i class="fas fa-envelope mr-2"></i> info@inmoideal.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full hover:bg-blue-600 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full hover:bg-blue-400 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full hover:bg-pink-600 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+            <p>&copy; 2023 InmoIdeal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
